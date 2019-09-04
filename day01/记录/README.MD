@@ -18,7 +18,7 @@
   ![linux命令](./img/createHelloImg.jpg)
 2. 将制作好的软盘使用virtualBox打开，启动后屏幕上出现HelloWorld说明成功了。
   ![](./img/run.jpg)
-  
+
 #### QEMU运行方法
 1. 将CD\OS\tolset复制到硬盘任意位置；
 2. 将制作好的hello.img 复制到tolset文件夹中;
@@ -71,7 +71,8 @@ reserve byte **空出一定大小的字节**。相当于填充0x00。
 ###改进汇编指令
 1. 将一下代码保存为hello.nas；
 2. 在!cons_*.bat 打开的命令行中输入asm，之后再输入run即可显示窗口。
-		```
+
+```
 		DB		0xeb, 0x4e, 0x90
 		DB		"HELLOIPL"		
 		DW		512				
@@ -88,7 +89,7 @@ reserve byte **空出一定大小的字节**。相当于填充0x00。
 		DD		2880			
 		DB		0,0,0x29		
 		DD		0xffffffff		
-		DB		"HELLO-OS   "	
+		DB		"HELLO-OS   "
 		DB		"FAT12   "		
 		RESB	18			
 		DB		0xb8, 0x00, 0x00, 0x8e, 0xd0, 0xbc, 0x00, 0x7c
@@ -102,7 +103,7 @@ reserve byte **空出一定大小的字节**。相当于填充0x00。
 		DB		0x0a			
 		DB		0
 
-		RESB	0x1fe-$	
+		RESB	0x1fe-$
 
 		DB		0x55, 0xaa
 
@@ -110,5 +111,6 @@ reserve byte **空出一定大小的字节**。相当于填充0x00。
 		RESB	4600
 		DB		0xf0, 0xff, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00
 		RESB	1469432
-		```
+```
+
   ![运行结果](./img/asmchange.jpg)
