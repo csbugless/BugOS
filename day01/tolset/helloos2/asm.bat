@@ -1,0 +1,1 @@
+..\z_tools\nask.exe hello.nas hello.img
