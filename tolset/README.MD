@@ -7,3 +7,6 @@
 
 ## day03
 * harib00a-j
+
+## day03
+* harib01a-c
